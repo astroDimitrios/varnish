@@ -1,0 +1,72 @@
+$color-mode-type: data;
+
+// Theme toggle from themetoggle.scss
+@include color-mode("solar") {
+  --bs-body-color: #363c44;
+  --bs-body-bg: #fdf6e3;
+  --bs-secondary-bg: #eee8d5;
+  --bs-tertiary-bg: #F8F1DE;
+
+  .top-nav {
+    .dropdown {
+      button {
+        background-color: var(--bs-body-bg);
+      }
+      .bordered-button {
+        background-color: var(--bs-body-bg);
+      }
+    }
+  }
+
+  figcaption {
+    background-color: var(--bs-body-bg);
+  }
+
+  .mermaid-img-wrapper {
+    details {
+      background-color: var(--bs-body-bg);
+    }
+  }
+
+  .lesson-progress {
+    background-color: var(--bs-secondary-bg);
+  }
+
+  .sidebar {
+    background-color: var(--bs-secondary-bg);
+    .accordion-button {
+      background-color: var(--bs-secondary-bg);
+    }
+  }
+
+  .overview {
+    background-color: var(--bs-secondary-bg);
+  }
+
+  .callout-inner {
+    background-color: var(--bs-secondary-bg);
+  }
+
+  .accordion-item {
+    background-color: var(--bs-secondary-bg);
+  }
+
+  .accordion-body {
+    background-color: var(--bs-secondary-bg);
+  }
+
+  pre {
+    background-color: var(--bs-tertiary-bg);
+  }
+
+  // Needs a darker blue for contrast
+  /* Syntax highlighting ---------------------------------------------------- */
+  /* modified arrow-light theme */
+
+  $solar-darker-blue: shade-color(#007BA5, 20%);
+
+  pre code span.cf /* ControlFlow    */ {color:$solar-darker-blue}
+  pre code span.kw /* Keyword        */ {color:$solar-darker-blue}
+  pre code span.ot /* Other          */ {color:$solar-darker-blue}
+
+}
