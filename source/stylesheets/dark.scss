@@ -624,6 +624,10 @@ $color-mode-type: data;
     color: var(--bs-body-color);
   }
 
+  figcaption > code {
+    background-color: var(--bs-body-bg);
+  }
+
   p > code {
     background-color: var(--bs-tertiary-bg);
   }
